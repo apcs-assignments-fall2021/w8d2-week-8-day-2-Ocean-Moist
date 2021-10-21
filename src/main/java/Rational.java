@@ -26,8 +26,7 @@ public class Rational {
     // (When you write the simplify method later on, you should
     // also call it in this method to return the simplified result)
     public static Rational add(Rational r, Rational s) {
-        // REPLACE WITH YOUR CODE HERE
-        return null;
+        return new Rational(r.numerator * (s.denominator + s.numerator * r.denominator, s.denominator * r.denominator);
     }
 
     // This method takes two Rationals, subtracts thems up, 
