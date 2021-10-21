@@ -3,7 +3,7 @@ public class Rational {
     // of these variables
     public int numerator;
     public int denominator;
-    
+
     /**
      * Constructor: the special method that will actually create a new Rational
      * object
@@ -15,7 +15,7 @@ public class Rational {
         numerator = a;
         denominator = b;
     }
-    
+
     // This method takes two Rationals, add them up,
     // and returns a Rational equal to the sum
     // You will need to:
@@ -35,10 +35,11 @@ public class Rational {
         // REPLACE WITH YOUR CODE HERE
         return simplify(new Rational(r.numerator * s.denominator - r.denominator * s.numerator, r.denominator * s.denominator));
     }
-    
+
     public static Rational multiply(Rational r, Rational s) {
         return simplify(new Rational(r.numerator * s.numerator, r.denominator * s.denominator));
     }
+
     public static Rational divide(Rational r, Rational s) {
 
         return simplify(new Rational(r.numerator * s.denominator, r.denominator * s.numerator));
@@ -47,7 +48,7 @@ public class Rational {
     // Finds the greatest common factor between a and b
     // To find the greatest common factor, find the largest number x
     // such that a and b are both multiples of x
-    public static int greatestCommonFactor(int a, int b){
+    public static int greatestCommonFactor(int a, int b) {
         if (b == 0) {
             return a;
         }
@@ -60,7 +61,7 @@ public class Rational {
     // e.g. simplify(2/4) => 1/2
     //      simplify(1/2) => 1/2
     public static Rational simplify(Rational r) {
-        return new Rational(r.numerator/greatestCommonFactor(r.numerator,r.denominator),r.denominator/greatestCommonFactor(r.numerator,r.denominator));
+        return new Rational(r.numerator / greatestCommonFactor(r.numerator, r.denominator), r.denominator / greatestCommonFactor(r.numerator, r.denominator));
     }
 
     // This following method is NOT static, we'll talk about it next class!

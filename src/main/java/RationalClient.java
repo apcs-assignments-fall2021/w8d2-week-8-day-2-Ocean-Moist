@@ -1,5 +1,5 @@
 public class RationalClient {
-    
+
     public static void main(String[] args) {
         Rational r = new Rational(1, 2);
         System.out.println(r); // 1/2
